@@ -4,10 +4,10 @@
 # ----- Enable mod_rewrite -----
 RewriteEngine On
 
-# ----- Force HTTPS -----
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# ----- Force HTTPS (DISABLED until AutoSSL provisions certs; re-enable after) -----
+# RewriteCond %{HTTPS} off
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # ----- Force www (canonical malaysiaclearice.com) -----
 # Comment this block out if you want apex (non-www) instead.
